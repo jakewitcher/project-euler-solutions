@@ -1,20 +1,26 @@
 package problem3
 
-func LargestPrimeFactor(n int) int {
+import "errors"
+
+func LargestPrimeFactor(n int) (int, error) {
+	if n < 1 {
+		return 0, errors.New("Range end must be greater than 0")
+	}
+
 	c := make(chan int)
 	primes := make([]int, 0)
 
 	go getPrimeNumbers(n, c)
 	for p := range c {
 		if n == p {
-			return n
+			return n, nil
 		}
 
 		primes = append(primes, p)
 		n = tryKnownPrimes(n, primes)
 	}
 
-	return n
+	return n, nil
 }
 
 func tryKnownPrimes(n int, primes []int) int {

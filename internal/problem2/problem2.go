@@ -1,6 +1,12 @@
 package problem2
 
-func SumEvenFibonacciNumbers(max int) int {
+import "errors"
+
+func SumEvenFibonacciNumbers(max int) (int, error) {
+	if max < 1 {
+		return 0, errors.New("Range end must be greater than 0")
+	}
+
 	var sum int
 
 	for prev, curr := 1, 2; curr <= max; {
@@ -12,5 +18,5 @@ func SumEvenFibonacciNumbers(max int) int {
 		curr += prev
 	}
 
-	return sum
+	return sum, nil
 }
