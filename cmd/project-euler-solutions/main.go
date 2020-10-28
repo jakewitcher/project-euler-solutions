@@ -9,12 +9,9 @@ import (
 )
 
 func main() {
-	answer := problem3.LargestPrimeFactor(839)
-	fmt.Println(answer)
-
-	// FindLargestPrimeFactor()
-	// SumMultiplesOfThreeAndFiveRange1000()
-	// SumEvenFibonacciNumbersMaxFourMillion()
+	FindLargestPrimeFactor()
+	SumMultiplesOfThreeAndFiveRange1000()
+	SumEvenFibonacciNumbersMaxFourMillion()
 }
 
 func SumMultiplesOfThreeAndFiveRange1000() {
