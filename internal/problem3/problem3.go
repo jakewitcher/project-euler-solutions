@@ -37,10 +37,10 @@ func tryKnownPrimes(n int, primes []int) int {
 }
 
 func getPrimeNumbers(n int, c chan int) {
-	primes := []int{1}
+	primes := make([]int, 0)
 	for i := 2; i <= n; i++ {
 		isPrime := true
-		for _, p := range primes[1:] {
+		for _, p := range primes {
 			if i%p == 0 {
 				isPrime = false
 				break

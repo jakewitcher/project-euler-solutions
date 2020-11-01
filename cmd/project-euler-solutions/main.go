@@ -9,6 +9,7 @@ import (
 	"github.com/jakewitcher/project-euler-solutions/internal/problem4"
 	"github.com/jakewitcher/project-euler-solutions/internal/problem5"
 	"github.com/jakewitcher/project-euler-solutions/internal/problem6"
+	"github.com/jakewitcher/project-euler-solutions/internal/problem7"
 )
 
 func main() {
@@ -17,7 +18,8 @@ func main() {
 	// FindLargestPrimeFactor()
 	// FindLargestPalindrome()
 	// SmallesetMultiple()
-	SumSquareDifference()
+	// SumSquareDifference()
+	TenThousandFirstPrime()
 }
 
 func SumMultiplesOfThreeAndFive() {
@@ -48,4 +50,9 @@ func SmallesetMultiple() {
 func SumSquareDifference() {
 	difference := problem6.SumSquareDifference(100)
 	fmt.Printf("The difference between the sum of the squares and the square of the sums is : %v\n", difference)
+}
+
+func TenThousandFirstPrime() {
+	n := problem7.NthPrime(10_001)
+	fmt.Printf("The 10,001 prime number is : %v\n", n)
 }
