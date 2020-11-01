@@ -13,8 +13,11 @@ func LargestPrimeFactor(n int) (int, error) {
 	go getPrimeNumbers(n, c)
 	for p := range c {
 		if n == p {
-			return n, nil
+			c <- 1
+			break
 		}
+
+		c <- 0
 
 		primes = append(primes, p)
 		n = tryKnownPrimes(n, primes)
@@ -47,6 +50,10 @@ func getPrimeNumbers(n int, c chan int) {
 		if isPrime {
 			primes = append(primes, i)
 			c <- i
+			if <-c == 1 {
+				close(c)
+				return
+			}
 		}
 	}
 }

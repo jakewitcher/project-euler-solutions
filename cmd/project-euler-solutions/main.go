@@ -7,13 +7,15 @@ import (
 	"github.com/jakewitcher/project-euler-solutions/internal/problem2"
 	"github.com/jakewitcher/project-euler-solutions/internal/problem3"
 	"github.com/jakewitcher/project-euler-solutions/internal/problem4"
+	"github.com/jakewitcher/project-euler-solutions/internal/problem5"
 )
 
 func main() {
-	SumMultiplesOfThreeAndFive()
-	SumEvenFibonacciNumbers()
-	FindLargestPrimeFactor()
-	FindLargestPalindrome()
+	// SumMultiplesOfThreeAndFive()
+	// SumEvenFibonacciNumbers()
+	// FindLargestPrimeFactor()
+	// FindLargestPalindrome()
+	SmallesetMultiple()
 }
 
 func SumMultiplesOfThreeAndFive() {
@@ -34,4 +36,9 @@ func FindLargestPrimeFactor() {
 func FindLargestPalindrome() {
 	palindrome, _ := problem4.LargestPalindromeProduct(3)
 	fmt.Printf("Largest palindrome product of three digit numbers : %v\n", palindrome)
+}
+
+func SmallesetMultiple() {
+	multiple := problem5.SmallestMultiple(20)
+	fmt.Printf("Smallest multiple of all numbers between 1 and 20 : %v\n", multiple)
 }
