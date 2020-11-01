@@ -8,6 +8,7 @@ import (
 	"github.com/jakewitcher/project-euler-solutions/internal/problem3"
 	"github.com/jakewitcher/project-euler-solutions/internal/problem4"
 	"github.com/jakewitcher/project-euler-solutions/internal/problem5"
+	"github.com/jakewitcher/project-euler-solutions/internal/problem6"
 )
 
 func main() {
@@ -15,7 +16,8 @@ func main() {
 	// SumEvenFibonacciNumbers()
 	// FindLargestPrimeFactor()
 	// FindLargestPalindrome()
-	SmallesetMultiple()
+	// SmallesetMultiple()
+	SumSquareDifference()
 }
 
 func SumMultiplesOfThreeAndFive() {
@@ -41,4 +43,9 @@ func FindLargestPalindrome() {
 func SmallesetMultiple() {
 	multiple := problem5.SmallestMultiple(20)
 	fmt.Printf("Smallest multiple of all numbers between 1 and 20 : %v\n", multiple)
+}
+
+func SumSquareDifference() {
+	difference := problem6.SumSquareDifference(100)
+	fmt.Printf("The difference between the sum of the squares and the square of the sums is : %v\n", difference)
 }
