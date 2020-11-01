@@ -10,6 +10,7 @@ import (
 	"github.com/jakewitcher/project-euler-solutions/internal/problem5"
 	"github.com/jakewitcher/project-euler-solutions/internal/problem6"
 	"github.com/jakewitcher/project-euler-solutions/internal/problem7"
+	"github.com/jakewitcher/project-euler-solutions/internal/problem8"
 )
 
 func main() {
@@ -19,7 +20,8 @@ func main() {
 	// FindLargestPalindrome()
 	// SmallesetMultiple()
 	// SumSquareDifference()
-	TenThousandFirstPrime()
+	// TenThousandFirstPrime()
+	LargestProductInSeries()
 }
 
 func SumMultiplesOfThreeAndFive() {
@@ -55,4 +57,9 @@ func SumSquareDifference() {
 func TenThousandFirstPrime() {
 	n := problem7.NthPrime(10_001)
 	fmt.Printf("The 10,001 prime number is : %v\n", n)
+}
+
+func LargestProductInSeries() {
+	product := problem8.LargestProductInSeries(13)
+	fmt.Printf("The largest product of 13 adjacent digits is: %v\n", product)
 }
