@@ -11,6 +11,7 @@ import (
 	"github.com/jakewitcher/project-euler-solutions/internal/problem6"
 	"github.com/jakewitcher/project-euler-solutions/internal/problem7"
 	"github.com/jakewitcher/project-euler-solutions/internal/problem8"
+	"github.com/jakewitcher/project-euler-solutions/internal/problem9"
 )
 
 func main() {
@@ -21,7 +22,8 @@ func main() {
 	// SmallesetMultiple()
 	// SumSquareDifference()
 	// TenThousandFirstPrime()
-	LargestProductInSeries()
+	// LargestProductInSeries()
+	SpecialPythagoreanTriplet()
 }
 
 func SumMultiplesOfThreeAndFive() {
@@ -62,4 +64,9 @@ func TenThousandFirstPrime() {
 func LargestProductInSeries() {
 	product := problem8.LargestProductInSeries(13)
 	fmt.Printf("The largest product of 13 adjacent digits is: %v\n", product)
+}
+
+func SpecialPythagoreanTriplet() {
+	product := problem9.SpecialPythagoreanTriplet()
+	fmt.Printf("The product of the pythagorean triplet is: %v\n", product)
 }
