@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"github.com/jakewitcher/project-euler-solutions/internal/problem1"
+	"github.com/jakewitcher/project-euler-solutions/internal/problem10"
 	"github.com/jakewitcher/project-euler-solutions/internal/problem2"
 	"github.com/jakewitcher/project-euler-solutions/internal/problem3"
 	"github.com/jakewitcher/project-euler-solutions/internal/problem4"
@@ -23,7 +24,8 @@ func main() {
 	// SumSquareDifference()
 	// TenThousandFirstPrime()
 	// LargestProductInSeries()
-	SpecialPythagoreanTriplet()
+	// SpecialPythagoreanTriplet()
+	SummationOfPrimes()
 }
 
 func SumMultiplesOfThreeAndFive() {
@@ -69,4 +71,9 @@ func LargestProductInSeries() {
 func SpecialPythagoreanTriplet() {
 	product := problem9.SpecialPythagoreanTriplet()
 	fmt.Printf("The product of the pythagorean triplet is: %v\n", product)
+}
+
+func SummationOfPrimes() {
+	sum := problem10.SummationOfPrimes(2_000_000)
+	fmt.Printf("The summation of all primes below 2,000,000 is: %v\n", sum)
 }
